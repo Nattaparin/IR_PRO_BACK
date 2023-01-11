@@ -8,6 +8,6 @@ from .database import db
 def create_user(*args, **kwargs):
     db.session.add(
         User(username='smart', password=bcrypt.hashpw('smart'.encode('utf-8'), bcrypt.gensalt(10)),
-             email='smart@hotmail.com',
+             email='smarty@hotmail.com',
              bookmark=None, favorite=None))
     db.session.commit()
